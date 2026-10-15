@@ -1,0 +1,45 @@
+### 请求 /infra/file-config/create 接口 => 成功
+POST {{baseUrl}}/infra/file-config/create
+Content-Type: application/json
+tenant-id: {{adminTenantId}}
+Authorization: Bearer {{token}}
+
+{
+  "name": "S3 示例",
+  "remark": "请替换为自己的密钥",
+  "storage": 20,
+  "config": {
+    "accessKey": "YOUR_ACCESS_KEY",
+    "accessSecret": "YOUR_ACCESS_SECRET",
+    "bucket": "your-bucket",
+    "endpoint": "s3.example.com",
+    "domain": "http://127.0.0.1:48080",
+    "region": "us-east-1"
+  }
+}
+
+### 请求 /infra/file-config/update 接口 => 成功
+PUT {{baseUrl}}/infra/file-config/update
+Content-Type: application/json
+tenant-id: {{adminTenantId}}
+Authorization: Bearer {{token}}
+
+{
+  "id": 2,
+  "name": "S3 示例",
+  "remark": "",
+  "config": {
+    "accessKey": "YOUR_ACCESS_KEY",
+    "accessSecret": "YOUR_ACCESS_SECRET",
+    "bucket": "your-bucket",
+    "endpoint": "s3.example.com",
+    "domain": "http://127.0.0.1:48080",
+    "region": "us-east-1"
+  }
+}
+
+### 请求 /infra/file-config/test 接口 => 成功
+GET {{baseUrl}}/infra/file-config/test?id=2
+Content-Type: application/json
+tenant-id: {{adminTenantId}}
+Authorization: Bearer {{token}}

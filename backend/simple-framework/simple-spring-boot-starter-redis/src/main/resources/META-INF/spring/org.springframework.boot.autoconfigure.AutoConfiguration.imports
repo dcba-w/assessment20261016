@@ -1,0 +1,2 @@
+cn.simple.boot.framework.redis.config.SimpleRedisAutoConfiguration
+cn.simple.boot.framework.redis.config.SimpleCacheAutoConfiguration

@@ -1,0 +1,2 @@
+cn.simple.boot.framework.quartz.config.SimpleQuartzAutoConfiguration
+cn.simple.boot.framework.quartz.config.SimpleAsyncAutoConfiguration

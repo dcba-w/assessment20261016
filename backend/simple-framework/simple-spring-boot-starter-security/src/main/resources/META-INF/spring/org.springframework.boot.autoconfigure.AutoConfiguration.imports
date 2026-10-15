@@ -1,0 +1,3 @@
+cn.simple.boot.framework.security.config.SimpleSecurityAutoConfiguration
+cn.simple.boot.framework.security.config.SimpleWebSecurityConfigurerAdapter
+cn.simple.boot.framework.operatelog.config.SimpleOperateLogConfiguration

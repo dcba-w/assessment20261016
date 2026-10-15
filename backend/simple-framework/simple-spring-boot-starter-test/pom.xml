@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>cn.simple.boot</groupId>
+        <artifactId>simple-framework</artifactId>
+        <version>${revision}</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>simple-spring-boot-starter-test</artifactId>
+    <packaging>jar</packaging>
+
+    <name>${project.artifactId}</name>
+    <description>单元测试组件：提供 JUnit 5 + Mockito 的测试基类与断言工具</description>
+    <url>https://example.com/simple-boot</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>cn.simple.boot</groupId>
+            <artifactId>simple-common</artifactId>
+        </dependency>
+
+        <!-- Test 测试相关。此处使用默认的 compile 作用域，业务模块只需以 test 作用域引入本组件即可 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

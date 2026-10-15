@@ -1,0 +1,6 @@
+Build report 2026-09-19T09:47:52.3923532+08:00
+RepoRoot=D:\personal_project\template
+BootDir=simple-boot-new
+T-AUTO-10=PASS
+T-AUTO-11=PASS
+Result=PASS

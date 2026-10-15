@@ -1,0 +1,2 @@
+cn.simple.boot.framework.tracer.config.SimpleTracerAutoConfiguration
+cn.simple.boot.framework.tracer.config.SimpleMetricsAutoConfiguration

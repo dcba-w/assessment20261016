@@ -1,0 +1,3 @@
+cn.simple.boot.framework.mq.redis.config.SimpleRedisMQProducerAutoConfiguration
+cn.simple.boot.framework.mq.redis.config.SimpleRedisMQConsumerAutoConfiguration
+cn.simple.boot.framework.mq.rabbitmq.config.SimpleRabbitMQAutoConfiguration

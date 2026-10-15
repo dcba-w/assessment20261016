@@ -1,0 +1,6 @@
+API smoke report 2026-09-19T09:49:44.3789111+08:00
+BaseUrl=http://127.0.0.1:48080
+Result=FAIL
+Failures=1
+
+login request failed: 无法连接到远程服务器

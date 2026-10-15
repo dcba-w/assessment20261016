@@ -1,0 +1,84 @@
+server:
+  port: ${SERVER_PORT:48080}
+
+spring:
+  datasource:
+    druid:
+      web-stat-filter:
+        enabled: false
+      stat-view-servlet:
+        enabled: false
+      filter:
+        wall:
+          config:
+            multi-statement-allow: false
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          url: jdbc:mysql://${MYSQL_HOST}:${MYSQL_PORT:3306}/${MYSQL_DATABASE}?sslMode=${MYSQL_SSL_MODE:VERIFY_IDENTITY}&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true
+          username: ${MYSQL_USERNAME}
+          password: ${MYSQL_PASSWORD}
+        slave:
+          lazy: true
+          url: jdbc:mysql://${MYSQL_SLAVE_HOST:${MYSQL_HOST}}:${MYSQL_SLAVE_PORT:${MYSQL_PORT:3306}}/${MYSQL_DATABASE}?sslMode=${MYSQL_SSL_MODE:VERIFY_IDENTITY}&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true&rewriteBatchedStatements=true
+          username: ${MYSQL_SLAVE_USERNAME:${MYSQL_USERNAME}}
+          password: ${MYSQL_SLAVE_PASSWORD:${MYSQL_PASSWORD}}
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      port: ${REDIS_PORT:6379}
+      database: ${REDIS_DATABASE:1}
+      password: ${REDIS_PASSWORD}
+      ssl:
+        enabled: ${REDIS_SSL_ENABLED:true}
+  boot:
+    admin:
+      client:
+        url: ${ADMIN_SERVER_URL:http://127.0.0.1:${server.port}/admin}
+        username: ${ADMIN_SERVER_USERNAME}
+        password: ${ADMIN_SERVER_PASSWORD}
+      context-path: /admin
+  kafka:
+    consumer:
+      properties:
+        spring.json.trusted.packages: cn.simple.boot
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+knife4j:
+  enable: false
+
+management:
+  server:
+    address: 127.0.0.1
+    port: ${MANAGEMENT_PORT:48090}
+  endpoints:
+    web:
+      base-path: /actuator
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
+simple:
+  captcha:
+    enable: true
+  security:
+    mock-enable: false
+    mock-secret: disabled-in-production
+    password-encoder-length: 10
+  sms-code:
+    expire-times: 5m
+    send-frequency: 1m
+    send-maximum-quantity-per-day: 10
+    begin-code: 100000
+    end-code: 999999
+  demo: false
+  access-log:
+    enable: true

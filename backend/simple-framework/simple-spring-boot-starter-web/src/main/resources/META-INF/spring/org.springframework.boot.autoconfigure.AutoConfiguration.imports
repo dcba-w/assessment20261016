@@ -1,0 +1,8 @@
+cn.simple.boot.framework.apilog.config.SimpleApiLogAutoConfiguration
+cn.simple.boot.framework.jackson.config.SimpleJacksonAutoConfiguration
+cn.simple.boot.framework.swagger.config.SimpleSwaggerAutoConfiguration
+cn.simple.boot.framework.web.config.SimpleWebAutoConfiguration
+cn.simple.boot.framework.xss.config.SimpleXssAutoConfiguration
+cn.simple.boot.framework.banner.config.SimpleBannerAutoConfiguration
+cn.simple.boot.framework.encrypt.config.SimpleApiEncryptAutoConfiguration
+cn.simple.boot.framework.ai.config.OpenAiCompatibleAutoConfiguration

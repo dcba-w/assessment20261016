@@ -1,0 +1,108 @@
+# 本仓库是「后端 Spring Boot + 管理端 Vue」放在同一个目录里。
+# 下面的规则对整个项目生效，用来挡住编译产物、依赖包、本机配置和运行时文件。
+
+######################################################################
+# 操作系统
+
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+######################################################################
+# 编辑器与 IDE（本机状态，不进仓库）
+
+### IntelliJ IDEA / Eclipse / NetBeans ###
+.idea/
+*.iml
+*.iws
+*.ipr
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+### VS Code / Cursor 的个人文件 ###
+# 共享的编辑器配置仍然提交：settings、任务、启动、推荐插件
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/
+*.swp
+*~
+
+.cursor/*
+!.cursor/rules/
+!.cursor/rules/**
+
+######################################################################
+# 后端（Maven / JDK）
+
+target/
+.flattened-pom.xml
+*.class
+hs_err_pid*
+replay_pid*
+*.hprof
+
+# 个人覆盖配置。模板 application.yaml / application-dev.yaml 仍要提交
+application-local.yaml
+application-local.yml
+application-my.yaml
+http-client.private.env.json
+
+# JRebel 热部署配置
+rebel.xml
+
+######################################################################
+# 前端（Node / pnpm / Vite）
+
+node_modules/
+dist/
+dist-ssr/
+.vite/
+.cache/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+auto-*.d.ts
+
+# Vite 约定：带 local 的环境文件是本机覆盖，不提交。
+# frontend/.env、.env.dev、.env.test、.env.stage、.env.prod 是环境模板，要提交。
+.env.local
+.env.*.local
+
+######################################################################
+# 测试（Playwright）
+
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+coverage/
+.nyc_output/
+.playwright-cli/
+
+######################################################################
+# 运行时产生的文件
+
+logs/
+*.log
+*.pid
+
+# 上传文件默认落在 ./data/file，不进仓库
+data/file/
+.image/

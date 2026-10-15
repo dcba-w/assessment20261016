@@ -1,0 +1,4 @@
+cn.simple.boot.framework.idempotent.config.SimpleIdempotentConfiguration
+cn.simple.boot.framework.lock4j.config.SimpleLock4jConfiguration
+cn.simple.boot.framework.ratelimiter.config.SimpleRateLimiterConfiguration
+cn.simple.boot.framework.signature.config.SimpleApiSignatureAutoConfiguration

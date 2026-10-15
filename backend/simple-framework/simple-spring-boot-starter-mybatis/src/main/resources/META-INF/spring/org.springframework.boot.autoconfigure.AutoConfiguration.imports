@@ -1,0 +1,3 @@
+cn.simple.boot.framework.datasource.config.SimpleDataSourceAutoConfiguration
+cn.simple.boot.framework.mybatis.config.SimpleMybatisAutoConfiguration
+cn.simple.boot.framework.translate.config.SimpleTranslateAutoConfiguration
